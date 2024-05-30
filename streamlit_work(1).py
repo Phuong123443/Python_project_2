@@ -41,14 +41,4 @@ and genre preferences.
     13. **writers**: Writer of the movie
 """
 )
-tab1= st.tabs(["General relation"])
-with tab1:
-    col1, col2 = st.columns([1,3])
-    with col1:
-        space(lines=10)
-        by_what = st.radio(
-            "Choose a certificate:",
-            ('R', '18+', 'Unrated', 'Not Rated', 'PG-13','Passed'),
-            key = "r1")
- 
 
