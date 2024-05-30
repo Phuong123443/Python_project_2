@@ -12,7 +12,7 @@ st.divider()
 df = pd.read_csv('IMDB Top 250 Movies.csv')
 st.markdown(
 """
-- **Description**: IMDB is a large online movie-database
+- **Description**: hello IMDB is a large online movie-database
 platform that provides information on films
 and television shows. It includes reviews
 and ratings from users, serving as a
