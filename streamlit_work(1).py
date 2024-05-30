@@ -51,20 +51,5 @@ with tab1:
             "Choose a certificate:",
             ('R', '18+', 'Unrated', 'Not Rated', 'PG-13','Passed'),
             key = "r1")
-    with col2:
- g=sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
-certificates = drama_df['certificate'].unique()
-palette = sb.color_palette("husl", len(certificates))
+ 
 
-for i, certificate in enumerate(certificates):
-    subset_df = drama_df[drama_df['certificate'] == certificate]
-   sb.violinplot(x="rating", data=subset_df,color=palette[i],ax=g.axes[i],cut=0, inner= None)
-
-g.set_titles(col_template="{col_name}")
-for ax in g.axes.flat:
-    ax.set_xlabel("Rating")
-    ax.set_xticks(np.arange(8.1,9.3,0.2))
-
-g.fig.subplots_adjust(top=0.9, wspace=0.5, hspace=0.5)
-g.fig.suptitle("Rating & Certificate among Drama Movies", fontsize=16, fontweight= 'bold')
-st.pyplot(g.fig)
