@@ -51,7 +51,7 @@ with tab1:
             ('R', '18+', 'Unrated', 'Not Rated', 'PG-13','Passed'),
             key = "r1")
     with col2:
- fig1 = g= sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
+ g= sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
 certificates = drama_df['certificate'].unique()
 palette = sb.color_palette("husl", len(certificates))
 
@@ -66,4 +66,4 @@ for ax in g.axes.flat:
 
 plt.subplots_adjust(top=0.9, wspace=0.5, hspace=0.5)
 plt.suptitle("Rating & Certificate among Drama Movies", fontsize=16, fontweight= 'bold')
-st.plotly_chart(fig1a, theme = "streamlit", use_container_width=True)
+st.pyplot(g.fig)
