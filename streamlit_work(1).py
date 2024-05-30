@@ -51,13 +51,13 @@ with tab1:
             ('R', '18+', 'Unrated', 'Not Rated', 'PG-13','Passed'),
             key = "r1")
     with col2:
-g = sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
+ fig1 = g= sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
 certificates = drama_df['certificate'].unique()
 palette = sb.color_palette("husl", len(certificates))
 
 for i, certificate in enumerate(certificates):
     subset_df = drama_df[drama_df['certificate'] == certificate]
-    fig1 = px.violin(x="rating", data=subset_df,color=palette[i],ax=g.axes[i],cut=0, inner= None)
+   px.violin(x="rating", data=subset_df,color=palette[i],ax=g.axes[i],cut=0, inner= None)
 
 g.set_titles(col_template="{col_name}")
 for ax in g.axes.flat:
