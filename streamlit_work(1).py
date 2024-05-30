@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_space import space
 import plotly.express as px
 import pandas as pd
+import seaborn as sb
 import numpy as np
 with st.sidebar:
     st.markdown("Author: **Le Phuong**")
@@ -51,7 +52,7 @@ with tab1:
             ('R', '18+', 'Unrated', 'Not Rated', 'PG-13','Passed'),
             key = "r1")
     with col2:
- g= sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
+ g=sb.FacetGrid(data=drama_df, col="certificate", col_wrap=3, sharex=False)
 certificates = drama_df['certificate'].unique()
 palette = sb.color_palette("husl", len(certificates))
 
@@ -64,6 +65,6 @@ for ax in g.axes.flat:
     ax.set_xlabel("Rating")
     ax.set_xticks(np.arange(8.1,9.3,0.2))
 
-plt.subplots_adjust(top=0.9, wspace=0.5, hspace=0.5)
-plt.suptitle("Rating & Certificate among Drama Movies", fontsize=16, fontweight= 'bold')
+g.fig.subplots_adjust(top=0.9, wspace=0.5, hspace=0.5)
+g.fig.suptitle("Rating & Certificate among Drama Movies", fontsize=16, fontweight= 'bold')
 st.pyplot(g.fig)
