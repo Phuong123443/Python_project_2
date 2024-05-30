@@ -13,7 +13,7 @@ df = pd.read_csv('IMDB Top 250 Movies.csv')
 drama_df = df[df['genre'] == 'Drama']
 st.markdown(
 """
-- **Description**:IMDB is a large online movie-database
+- **Description**: IMDB is a large online movie-database
 platform that provides information on films
 and television shows. It includes reviews
 and ratings from users, serving as a
