@@ -9,7 +9,7 @@ with st.sidebar:
     st.title("Welcome!")
 st.markdown("IMDB Top 250 Movies.")
 st.divider()
-df = pd.read_csv(r'D:/Downloads/FY/Business IT/archive/IMDB Top 250 Movies.csv')
+df = pd.read_csv('IMDB Top 250 Movies.csv')
 st.markdown(
 """
 - **Description**: IMDB is a large online movie-database
