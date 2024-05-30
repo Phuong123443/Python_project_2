@@ -32,7 +32,7 @@ and genre preferences.
     5. **genre**: Genre of the movie
     6. **certificate**: Certificate of the movie
     7. **run_time**: Total movie run time
-    8. **tagline **: Tagline of the movie
+    8. **tagline**: Tagline of the movie
     9. **budget**: Budget of the movie (dollars)
     10. **box_office**: Total box office collection across the world (dollars)
     11. **casts**: All casts of the movie
