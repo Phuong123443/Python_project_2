@@ -6,8 +6,8 @@ import numpy as np
 with st.sidebar:
     st.markdown("Author: **Le Phuong**")
     st.text("Description: This is my Interactive Web Application for Python Project 2.")
-    st.title("IMDB Top 250 Movies") 
-st.markdown("Business IT 2|Python")
+    st.title("Business IT 2|Python", size=30) 
+st.markdown("IMDB Top 250 Movies")
 st.divider()
 df = pd.read_csv('IMDB Top 250 Movies.csv')
 st.markdown(
