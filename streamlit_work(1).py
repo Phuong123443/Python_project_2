@@ -58,7 +58,7 @@ palette = sb.color_palette("husl", len(certificates))
 
 for i, certificate in enumerate(certificates):
     subset_df = drama_df[drama_df['certificate'] == certificate]
-   px.violin(x="rating", data=subset_df,color=palette[i],ax=g.axes[i],cut=0, inner= None)
+   sb.violinplot(x="rating", data=subset_df,color=palette[i],ax=g.axes[i],cut=0, inner= None)
 
 g.set_titles(col_template="{col_name}")
 for ax in g.axes.flat:
