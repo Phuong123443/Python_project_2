@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit_space import space
 import plotly.express as px
 import pandas as pd
-import seaborn as sb
 import numpy as np
 with st.sidebar:
     st.markdown("Author: **Le Phuong**")
